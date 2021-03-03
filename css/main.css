@@ -23,10 +23,43 @@
     padding: 2em;
 }
 
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
 /* -----------------Logo------------------- */
+.logo{
+    cursor: pointer;
+}
 
 .logo img{
     height: 4.5em;
+}
+
+/* -----------------Nav Right------------------- */
+.nav_right{
+    display: flex;
+}
+
+.help{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 64px;
+    width: 64px;
+    cursor: pointer;
+    margin:.5em;
+}
+
+.mute{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 64px;
+    width: 64px;
+    cursor: pointer;
+    margin:.5em;
 }
 
 /* -----------------Birthday Entry------------------- */
@@ -47,9 +80,12 @@
 .birthday form{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .birthday_entry{
+    height: 6vh;
+    width: 20rem;
     border-radius: 3em;
     border: none;
     margin: .5em;
@@ -59,33 +95,38 @@
     color: white;
 }
 
-.birthday_entry:focus{
-    border: black;
-    border-radius: 3em;
-}
 
 .birthday_submit{
+    height: 6vh;
+    width: 20rem;
     font-size: 2em;
     font-weight: bold;
-    padding: .1em 4em;
+    padding: .1em;
     border-radius: 3em;
     background-color: #A22020;
     color: white;
     border: none;
     margin: .5em;
+    cursor: pointer;
+    text-align: center;
 }
 
 
 /* -----------------Classes UI------------------- */
 .class_ui_container{
-    width: 14%;
-    height: 100%;
+    width: 14vw;
+    height: 100vh;
     background-color: #222;
     display: flex;
+    justify-content: center;
     flex-flow: row wrap;
     padding: 2vh 1vw;
 }
 
-.class_ui_container svg{
+.class_UI{
+    background-color: #424242;
+    height: 5vw;
+    width: 5vw;
     margin: .8vh .5vw;
+    cursor: pointer;
 }

@@ -10,8 +10,15 @@
 <body>
     <div class="page_container">
         <div id="birthday_ui_container">
-            <div class="logo">
-                <img src="img/Logo.png" alt="">
+            <div class="nav">
+                <div class="logo">
+                    <img src="img/Logo.png" alt="">
+                </div>
+                <div class="nav_right">
+                    <div class="help">helpPH</div>
+                    <div class="mute">mute</div>
+                </div>
+
             </div>
 
             <div class="birthday">
@@ -20,55 +27,37 @@
                         <circle cx="163" cy="163" r="163" fill="#424242"/>
                     </svg>
                 </div>
-                <h1>Enter Your Birthday</h1>
+                <h1>What's Your Class?</h1>
                 <form>
                     <!-- __________Birthday Entry_________ -->
-                    <input class="birthday_entry" type="date" id="send" oninput="result.value = send.value">
+                    <input type="date" value="1111-11-11 "
+                    class="birthday_entry" id="b_date" 
+                     min="1800-01-01" max="2100-01-01">
                     <!-- <input type="text" id="result"> -->
-                    <input class="birthday_submit" type="submit">
+                    <!-- <input class="birthday_submit" id="submit" type="submit" value="Submit"> -->
+                    <div class="birthday_submit" id="submit">Submit</div>
                 </form>
 
             </div>
         </div>
 
+        <div class="class_detail"></div>
+
         <div class="class_ui_container">
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
-            <svg height="5vw" width="5vw">
-                <circle cx="2.5vw" cy="2.5vw" r="2.5vw" fill="#424242"/>
-            </svg>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
+            <div class="class_UI"></div>
         </div>
     </div>
 </body>
+<script src="js/main.js"></script>
 </html>
