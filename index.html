@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Classes</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="page_container">
+        <div id="birthday_ui_container" >
+            <div class="nav">
+                <div class="logo">
+                    <a href="./index.html"><img src="img/Logo.png" alt=""></a>
+                </div>
+                <div class="nav_right">
+                    <div class="help">helpPH</div>
+                    <div class="mute">mute</div>
+                </div>
+
+            </div>
+
+            <div class="birthday">
+                <div class="icon">
+                
+                </div>
+                <h1 id="what_is_ur_class">What is Your Class?</h1>
+
+                <form>
+                    <!-- __________Birthday Entry_________ -->
+                    <input type="date" value="1111-11-11 "
+                    class="birthday_entry" id="b_date" 
+                     min="1800-01-01" max="2100-01-01">
+                    <!-- <input type="text" id="result"> -->
+                    <!-- <input class="birthday_submit" id="submit" type="submit" value="Submit"> -->
+                </form>
+                <div class="birthday_submit" id="submit">Submit</div>
+                <div id="invalid_date" hidden>Invalid date</div>
+            </div>
+        </div>
+
+        <div class="class_detail_collapsed" id="class_detail">
+            <p>hello</p>
+            <div id="class_detail_text" hidden></div>
+        </div>
+
+        <div class="class_ui_container">
+            <div class="class_UI" id="barbarian"></div>
+            <div class="class_UI" id="bard"></div>
+            <div class="class_UI" id="cleric"></div>
+            <div class="class_UI" id="druid"></div>
+            <div class="class_UI" id="fighter"></div>
+            <div class="class_UI" id="monk"></div>
+            <div class="class_UI" id="paladin"></div>
+            <div class="class_UI" id="ranger"></div>
+            <div class="class_UI" id="rogue"></div>
+            <div class="class_UI" id="sorcerer"></div>
+            <div class="class_UI" id="warlock"></div>
+            <div class="class_UI" id="wizard"></div>
+        </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>
