@@ -1,4 +1,6 @@
 //fn()
+
+
 function expand(){
   let class_detail = document.getElementById('class_detail');
   let b_day_ui = document.getElementById('birthday_ui_container');
@@ -11,7 +13,6 @@ function expand(){
   b_date.classList.remove('birthday_entry');
   document.getElementById('what_is_ur_class').setAttribute('class', 'what_is_ur_class');
   
-  // document.querySelector('.birthday').style.justifyContent = 'flex-start';
 }
 
 function collapse(){
@@ -26,8 +27,8 @@ function collapse(){
   class_detail_text.hidden = true;
   b_date.setAttribute('class', 'birthday_entry');
   document.getElementById('what_is_ur_class').classList.remove('what_is_ur_class');
-  document.getElementById('class_range').innerHTML = '';
-  // document.querySelector('.birthday').style.justifyContent = 'center';
+  document.getElementById('class_range').innerHTML = 'Enter your birthday:';
+  document.getElementById('icon').style.backgroundImage = "url('./img/unknown.png')";
 }
 
 
@@ -72,7 +73,9 @@ function whatClass(whichMonth, whichDayOfMonth, class_detail){
 
 function barbarian(){
   expand();
-  
+  if (!mute){
+    s_barbarian.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Barbarian';
   document.getElementById('class_range').innerHTML = '22 December –  20 January';
@@ -106,14 +109,16 @@ function barbarian(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/barbarian">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/barbarian.png')";
 }
 function bard(){
-
-
   expand();
-is_submit = false;
-document.getElementById('what_is_ur_class').innerHTML = 'Bard';
-document.getElementById('class_range').innerHTML = '20 January –  19 February';
+  if (!mute){
+    s_bard.play();
+  }
+  is_submit = false;
+  document.getElementById('what_is_ur_class').innerHTML = 'Bard';
+  document.getElementById('class_range').innerHTML = '20 January –  19 February';
   class_detail_text.innerHTML = 
   `<h1>Bard</h1>
   <p>Humming as she traces her fingers over an ancient monument in a long-forgotten ruin, a half-elf in rugged leathers finds knowledge springing into her mind, conjured forth by the magic of her song—knowledge of the people who constructed the monument and the mythic saga it depicts.
@@ -141,11 +146,14 @@ document.getElementById('class_range').innerHTML = '20 January –  19 February'
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/bard">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/bard.png')";
   
 }
 function cleric(){
   expand();
-  
+  if (!mute){
+    s_cleric.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Cleric';
   document.getElementById('class_range').innerHTML = '19 February –  21 March';
@@ -180,11 +188,14 @@ function cleric(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/cleric">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/cleric.png')";
   
 }
 function druid(){
   expand();
-  
+  if (!mute){
+    s_druid.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Druid';
   document.getElementById('class_range').innerHTML = '21 March –  20 April';
@@ -217,10 +228,13 @@ function druid(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/druid">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/druid.png')";
 }
 function fighter(){
   expand();
-  
+  if (!mute){
+    s_fighter.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Fighter';
   document.getElementById('class_range').innerHTML = '20 April –  21 May';
@@ -249,10 +263,13 @@ function fighter(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/fighter">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/fighter.png')";
 }
 function monk(){
   expand();
-  
+  if (!mute){
+    s_monk.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Monk';
   document.getElementById('class_range').innerHTML = '21 May –  21 June';
@@ -286,10 +303,13 @@ function monk(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/monk">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/monk.png')";
 }
 function paladin(){
   expand();
-  
+  if (!mute){
+    s_paladin.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Paladin';
   document.getElementById('class_range').innerHTML = '21 June –  23 July';
@@ -322,10 +342,13 @@ function paladin(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/paladin">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/paladin.png')";
 }
 function ranger(){
   expand();
-  
+  if (!mute){
+    s_ranger.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Ranger';
   document.getElementById('class_range').innerHTML = '23 July –  23 August';
@@ -358,10 +381,13 @@ function ranger(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/ranger">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/ranger.png')";
 }
 function rogue(){
   expand();
-  
+  if (!mute){
+    s_rogue.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Rogue';
   document.getElementById('class_range').innerHTML = '23 August –  23 September';
@@ -394,10 +420,13 @@ function rogue(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/ranger">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/rogue.png')";
 }
 function sorcerer(){
   expand();
-  
+  if (!mute){
+    s_sorcerer.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Sorcerer';
   document.getElementById('class_range').innerHTML = '23 September –  23 October';
@@ -432,10 +461,13 @@ function sorcerer(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/sorcerer">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/sorcerer.png')";
 }
 function warlock(){
   expand();
-  
+  if (!mute){
+    s_warlock.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Warlock';
   document.getElementById('class_range').innerHTML = '23 October –  22 November';
@@ -470,23 +502,82 @@ function warlock(){
   <div id="dnd_beyond_link">
       <a href="https://www.dndbeyond.com/classes/warlock">More Information >></a>
       </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/warlock.png')";
 }
 function wizard(){
   expand();
-  
+  if (!mute){
+    s_wizard.play();
+  }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Wizard';
   document.getElementById('class_range').innerHTML = '23 November –  22 December';
+  class_detail_text.innerHTML = 
+  `<h1>Wizard</h1>
+    <p>
+    Clad in the silver robes that denote her station, an elf closes her eyes to shut out the distractions of the battlefield and begins her quiet chant. Fingers weaving in front of her, she completes her spell and launches a tiny bead of fire toward the enemy ranks, where it erupts into a conflagration that engulfs the soldiers.
+    <br></br>
+    Checking and rechecking his work, a human scribes an intricate magic circle in chalk on the bare stone floor, then sprinkles powdered iron along every line and graceful curve. When the circle is complete, he drones a long incantation. A hole opens in space inside the circle, bringing a whiff of brimstone from the otherworldly plane beyond.
+    <br></br>
+    Crouching on the floor in a dungeon intersection, a gnome tosses a handful of small bones inscribed with mystic symbols, muttering a few words of power over them. Closing his eyes to see the visions more clearly, he nods slowly, then opens his eyes and points down the passage to his left.
+    <br></br>
+    Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, and brute-force mind control. Their magic conjures monsters from other planes of existence, glimpses the future, or turns slain foes into zombies. Their mightiest spells change one substance into another, call meteors down from the sky, or open portals to other worlds.
+  </p>
+  
+  <h2>Scholars of the Arcane</h2>
+  <p>
+    Wild and enigmatic, varied in form and function, the power of magic draws students who seek to master its mysteries. Some aspire to become like the gods, shaping reality itself. Though the casting of a typical spell requires merely the utterance of a few strange words, fleeting gestures, and sometimes a pinch or clump of exotic materials, these surface components barely hint at the expertise attained after years of apprenticeship and countless hours of study.
+    <br></br>
+    Wizards live and die by their spells. Everything else is secondary. They learn new spells as they experiment and grow in experience. They can also learn them from other wizards, from ancient tomes or inscriptions, and from ancient creatures (such as the fey) that are steeped in magic.
+  </p>
+
+  <h2>The Lure of Knowledge</h2>
+  <p>
+    Wizards’ lives are seldom mundane. The closest a wizard is likely to come to an ordinary life is working as a sage or lecturer in a library or university, teaching others the secrets of the multiverse. Other wizards sell their services as diviners, serve in military forces, or pursue lives of crime or domination.
+    <br></br>
+    But the lure of knowledge and power calls even the most unadventurous wizards out of the safety of their libraries and laboratories and into crumbling ruins and lost cities. Most wizards believe that their counterparts in ancient civilizations knew secrets of magic that have been lost to the ages, and discovering those secrets could unlock the path to a power greater than any magic available in the present age.
+  </p>
+
+  <div id="dnd_beyond_link">
+      <a href="https://www.dndbeyond.com/classes/wizard">More Information >></a>
+      </div>`;
+  document.getElementById('icon').style.backgroundImage = "url('./img/wizard.png')";
 }
 
 
 
 
-// run
+// run-----------------------------------------------------------------------------------------------
 var submit = document.getElementById('submit');
 var is_submit = true;
 const submit_text = document.getElementById('submit');
 const class_UI = document.querySelectorAll('.class_UI');
+
+var s_barbarian = new Audio('./sound/barbarian.mp3');
+var s_bard = new Audio('./sound/bard.mp3');
+var s_cleric = new Audio('./sound/cleric.mp3');
+var s_druid = new Audio('./sound/druid.mp3');
+var s_fighter = new Audio('./sound/fighter.mp3');
+var s_monk = new Audio('./sound/monk.mp3');
+var s_paladin = new Audio('./sound/paladin.mp3');
+var s_ranger = new Audio('./sound/ranger.mp3');
+var s_rogue = new Audio('./sound/rogue.mp3');
+var s_sorcerer = new Audio('./sound/sorcerer.mp3');
+var s_warlock = new Audio('./sound/warlock.mp3');
+var s_wizard = new Audio('./sound/wizard.mp3');
+s_barbarian.volume = .4;
+s_bard.volume = .4;
+s_cleric.volume = .4;
+s_druid.volume = .4;
+s_fighter.volume = .4;
+s_monk.volume = .4;
+s_paladin.volume = .4;
+s_ranger.volume = .4;
+s_rogue.volume = .4;
+s_sorcerer.volume = .4;
+s_warlock.volume = .4;
+s_wizard.volume = .4;
+
 
 submit.addEventListener('click',function(){
   var b_date = new Date(document.getElementById('b_date').value);
@@ -531,7 +622,7 @@ const c_wizard = document.getElementById('wizard');
 
 c_barbarian.addEventListener('click',function(){
   barbarian();
-  
+
 },false);
 c_bard.addEventListener('click',function(){
   bard();
@@ -577,3 +668,31 @@ c_wizard.addEventListener('click',function(){
   wizard();
   
 },false);
+
+const help = document.getElementById('help');
+const modal_close = document.getElementById('modal_close');
+
+help.addEventListener('click',function(){
+  console.log('help');
+  document.querySelector('.help_modal_bg').setAttribute('id','modal_active');
+})
+
+modal_close.addEventListener('click',function(){
+  document.querySelector('.help_modal_bg').removeAttribute('id');
+})
+
+
+var mute = false;
+
+const play = document.getElementById('mute');
+
+play.addEventListener('click',function(){
+  if(mute){
+    mute = false;
+    play.style.backgroundImage = "url('./img/unmute.svg')"
+  }
+  else{
+    mute = true;
+    play.style.backgroundImage = "url('./img/mute.svg')"
+  }
+})

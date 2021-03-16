@@ -2,9 +2,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
+body{
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+p{
+    font-family: 'Alegreya Sans', sans-serif;
+}
 .page_container{
     display: flex;
     flex-flow: row wrap;
@@ -20,9 +25,6 @@ a{
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar-track{
-    color: red;
-  }
 
 /* -----------------Birthday UI------------------- */
 #birthday_ui_container{
@@ -60,24 +62,39 @@ a{
     display: flex;
 }
 
-.help{
-    background-color: black;
+#help{
+    background-image: url('../img/help.svg');
     color: white;
     text-align: center;
-    height: 64px;
-    width: 64px;
+    height: 32px;
+    width: 32px;
     cursor: pointer;
     margin:.5em;
+    border-radius: 32px;
+    opacity: .5;
+    transition: opacity .2s;
+}
+#help:hover{
+    opacity: 1;
+    transition: opacity .2s;
+}
+#mute{
+    /* background-color: black; */
+    color: white;
+    background-image: url('../img/unmute.svg');
+    background-size: cover;
+    text-align: center;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin:.5em;
+    opacity: .5;
+    transition: opacity .2s;
 }
 
-.mute{
-    background-color: black;
-    color: white;
-    text-align: center;
-    height: 64px;
-    width: 64px;
-    cursor: pointer;
-    margin:.5em;
+#mute:hover{
+    opacity: 1;
+    transition: opacity .2s;
 }
 
 /* -----------------Birthday Entry------------------- */
@@ -90,12 +107,16 @@ a{
     /* padding: 8vh 5vw; */
 }
 
-.icon{
+#icon{
     height: 22vw;
     width: 22vw;
-    background-color: black;
+    background-color: rgb(238, 238, 238);
+    background-image: url('../img/unknown.png');
+    border: 10px solid rgb(43, 43, 43);
+    box-shadow: 0 0 10px rgb(126, 126, 126);
+    background-size: cover;
     border-radius: 14vw;
-    margin: 2rem;
+    /* margin: 2rem; */
 }
 
 .what_is_ur_class{
@@ -218,15 +239,18 @@ a{
     margin: .8vh .5vw;
     cursor: pointer;
     border-radius: 100%;
-    opacity: .8;
-    border: 5px solid rgba(51, 51, 51, 0);
-    transition: all .7s;
+    opacity: .7;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 0 rgb(177, 177, 177);
+    transition: all .2s;
 }
 
 .class_UI:hover{
     opacity: 1;
     border: 5px solid rgb(231, 231, 231);
-    transition: all .7s;
+    box-shadow: 0 0 10 rgb(177, 177, 177);
+    transition: all .2s;
+    box-shadow: 0 0 10px rgba(141, 141, 141, 0.404);
 }
 
 /* -------------------------------- */
@@ -240,7 +264,7 @@ a{
     overflow-y: scroll;
 }
 #class_detail_text h1{
-    font-size: 4rem;
+    font-size: 6rem;
     border-bottom: 2px solid white;
     margin-bottom: 1rem;
     
@@ -254,7 +278,7 @@ a{
 }
 
 #class_detail_text p{
-    font-size: 1.15rem;
+    font-size: 1.125rem;
     line-height: 1.5rem;
     padding-right: 5rem;
 }
@@ -284,4 +308,112 @@ a{
 #barbarian{
     background: url('../img/barbarian_icon.jpeg');
     background-size: contain;
+}
+
+#bard{
+    background: url('../img/bard_icon.jpeg');
+    background-size:contain;
+}
+#cleric{
+    background: url('../img/cleric_icon.jpeg');
+    background-size:contain;
+}
+#druid{
+    background: url('../img/druid_icon.jpeg');
+    background-size:contain;
+}
+#fighter{
+    background: url('../img/fighter_icon.jpeg');
+    background-size:contain;
+}
+#monk{
+    background: url('../img/monk_icon.jpeg');
+    background-size:contain;
+}
+#paladin{
+    background: url('../img/paladin_icon.jpeg');
+    background-size:contain;
+}
+#ranger{
+    background: url('../img/ranger_icon.jpeg');
+    background-size:contain;
+}
+#rogue{
+    background: url('../img/rogue_icon.jpeg');
+    background-size:contain;
+}
+#sorcerer{
+    background: url('../img/sorcerer_icon.jpeg');
+    background-size:contain;
+}
+#warlock{
+    background: url('../img/warlock_icon.jpeg');
+    background-size:contain;
+}
+#wizard{
+    background: url('../img/wizard_icon.jpeg');
+    background-size:contain;
+}
+
+/* ---------------modal----------------- */
+.help_modal_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 86vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.308);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+}
+
+#help_modal{
+    position: relative;
+    background-color: white;
+    width: 35%;
+    padding: 1vw 2vw 2vw 2vw;
+    border: 5px solid rgb(61, 61, 61);
+    border-radius: 1.5vw;
+
+}
+
+#help_modal h1{
+    font-size: 3rem;
+    border-bottom: 2px solid black;
+    margin-bottom: 1rem;
+}
+
+#help_modal p{
+    font-size: 1.25rem;
+}
+
+#modal_close{
+    position: absolute;
+    font-size: 2rem;
+    top: 1vw;
+    right: 2vw;
+    margin: .8rem 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-image: url('../img/x.svg');
+    background-size: contain;
+    cursor: pointer;
+    opacity: .7;
+    transition: opacity .2s;
+}
+
+#modal_close:hover{
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+#modal_active{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s, visibility .5s;
 }
