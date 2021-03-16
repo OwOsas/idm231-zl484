@@ -95,12 +95,26 @@ a{
     width: 22vw;
     background-color: black;
     border-radius: 14vw;
+    margin: 2rem;
 }
 
-.birthday h1{
+.what_is_ur_class{
+    width:  100% !important;
+    /* text-align: start !important; */
+    transition: width .7s ease-in;
+}
+
+#what_is_ur_class{
     margin: 2%;
     font-size: 2.7em;
     line-height: 1em;
+    text-align: center;
+    width: 25rem;
+    transition: width .7s ease-in;
+}
+
+#class_range{
+    margin: .3rem;
 }
 
 .birthday form{
@@ -109,25 +123,34 @@ a{
     align-items: center;
 }
 
-.birthday_entry{
+#b_date{
     box-sizing: border-box;
-    width: 20vw;
+    width: 0;
     border-radius: 3em;
     border: 2px solid #c8c8c8;
-    margin: 1vh 1vw;
+    margin: 0;
     font-size: 1.5em;
     text-align: center;
-    padding: .5em;
+    padding: 0;
     background-color: #c8c8c8;
     color: white;
     outline: none;
-    transition: border ..7s;
+    opacity: 0;
+    transition: width .3s, padding .3s, margin .3s, opacity .3s;
 }
 
-.birthday_entry:focus,
-.birthday_entry:hover{
-    border: 2px solid darkgray;
-    transition: border ..7s;
+.birthday_entry{
+    width: 20vw !important;
+    padding: .5em !important;
+    margin: 1vh 1vw !important;
+    opacity: 1 !important;
+    transition: width .3s, padding .3s, margin .3s, opacity .3s;
+}
+
+#b_date:focus,
+#b_date:hover{
+    border: 2px solid rgb(43, 43, 43);
+    transition: border .3s;
 }
 
 
@@ -140,7 +163,6 @@ a{
     border-radius: 3em;
     background-color: rgb(102, 0, 0);
     color: white;
-    border: none;
     margin: 1vh 1vw;
     cursor: pointer;
     text-align: center;
@@ -198,13 +220,13 @@ a{
     border-radius: 100%;
     opacity: .8;
     border: 5px solid rgba(51, 51, 51, 0);
-    transition: all ..7s;
+    transition: all .7s;
 }
 
 .class_UI:hover{
     opacity: 1;
     border: 5px solid rgb(231, 231, 231);
-    transition: all ..7s;
+    transition: all .7s;
 }
 
 /* -------------------------------- */
@@ -221,6 +243,7 @@ a{
     font-size: 4rem;
     border-bottom: 2px solid white;
     margin-bottom: 1rem;
+    
 }
 
 #class_detail_text h2{
@@ -231,7 +254,7 @@ a{
 }
 
 #class_detail_text p{
-    font-size: 1rem;
+    font-size: 1.15rem;
     line-height: 1.5rem;
     padding-right: 5rem;
 }
