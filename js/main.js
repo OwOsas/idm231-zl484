@@ -32,53 +32,59 @@ function collapse(){
 }
 
 
-function whatClass(whichMonth, whichDayOfMonth, class_detail){
+function whatClass(whichMonth, whichDayOfMonth){
+  console.log('whatClass' + whichMonth, whichDayOfMonth);
   if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
     barbarian();
     return 'Barbarian';
   } else if ((whichMonth == 11 && whichDayOfMonth >= 22) || (whichMonth == 12 && whichDayOfMonth<= 21)) {
-    bard();
-    return 'Bard';  } else if ((whichMonth == 10 && whichDayOfMonth >= 24) || (whichMonth == 11 && whichDayOfMonth<= 21)) {
-    cleric();
-    return 'Cleric';
+    wizard();
+    return 'Wizard';
+  } else if ((whichMonth == 10 && whichDayOfMonth >= 24) || (whichMonth == 11 && whichDayOfMonth<= 21)) {
+    warlock();
+    return 'Warlock';
   } else if ((whichMonth == 9 && whichDayOfMonth >= 23) || (whichMonth == 10 && whichDayOfMonth<= 23)) {
-    druid();
-    return 'Druid';
+    sorcerer();
+    return 'Sorcerer';
   } else if ((whichMonth == 8 && whichDayOfMonth >= 23) || (whichMonth == 9 && whichDayOfMonth<= 22)) {
-    fighter();
-    return 'Fighter';
+    rogue();
+    return 'Rogue';
   } else if ((whichMonth == 7 && whichDayOfMonth >= 23) || (whichMonth == 8 && whichDayOfMonth<= 22)) {
-    monk();
-    return 'Monk';
+    ranger();
+    return 'Ranger';
   } else if ((whichMonth == 6 && whichDayOfMonth >= 22) || (whichMonth == 7 && whichDayOfMonth<= 22)) {
     paladin();
     return 'Paladin';
   } else if ((whichMonth == 5 && whichDayOfMonth >= 21) || (whichMonth == 6 && whichDayOfMonth<= 21)) {
-    ranger();
-    return 'Ranger';
+    monk();
+    return 'Monk';
   } else if ((whichMonth == 4 && whichDayOfMonth >= 20) || (whichMonth == 5 && whichDayOfMonth<= 20)) {
-    rogue();
-    return 'Rogue';
+    fighter();
+    return 'Fighter';
   } else if ((whichMonth == 3 && whichDayOfMonth >= 21) || (whichMonth == 4 && whichDayOfMonth<= 19)) {
-    sorcerer();
-    return 'Sorcerer';
+
+    druid();
+    return 'Druid';
   } else if ((whichMonth == 2 && whichDayOfMonth >= 19) || (whichMonth == 3 && whichDayOfMonth<= 20)) {
-    warlock();
-    return 'Warlock';
+    cleric();
+    return 'Cleric';
   } else if ((whichMonth == 1 && whichDayOfMonth >= 20) || (whichMonth == 2 && whichDayOfMonth<= 18)) {
-    wizard();
-    return 'Wizard';
+    bard();
+    return 'Bard';  
   }
 }
 
 function barbarian(){
+  console.log('barbarian');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_barbarian.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Barbarian';
-  document.getElementById('class_range').innerHTML = '22 December –  20 January';
+  document.getElementById('class_range').innerHTML = '22 December –  19 January';
   class_detail_text.innerHTML = 
   `<h1>Barbarian</h1>
   <p>
@@ -107,18 +113,21 @@ function barbarian(){
       Their courage in the face of danger makes barbarians perfectly suited for adventuring. Wandering is often a way of life for their native tribes, and the rootless life of the adventurer is little hardship for a barbarian. Some barbarians miss the close-knit family structures of the tribe, but eventually find them replaced by the bonds formed among the members of their adventuring parties.
   </p>
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/barbarian">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/barbarian"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/barbarian.png')";
 }
 function bard(){
+  console.log('bard');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_bard.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Bard';
-  document.getElementById('class_range').innerHTML = '20 January –  19 February';
+  document.getElementById('class_range').innerHTML = '20 January –  18 February';
   class_detail_text.innerHTML = 
   `<h1>Bard</h1>
   <p>Humming as she traces her fingers over an ancient monument in a long-forgotten ruin, a half-elf in rugged leathers finds knowledge springing into her mind, conjured forth by the magic of her song—knowledge of the people who constructed the monument and the mythic saga it depicts.
@@ -144,19 +153,22 @@ function bard(){
     Only rarely do bards settle in one place for long, and their natural desire to travel—to find new tales to tell, new skills to learn, and new discoveries beyond the horizon—makes an adventuring career a natural calling. Every adventure is an opportunity to learn, practice a variety of skills, enter long-forgotten tombs, discover lost works of magic, decipher old tomes, travel to strange places, or encounter exotic creatures. Bards love to accompany heroes to witness their deeds firsthand. A bard who can tell an awe-inspiring story from personal experience earns renown among other bards. Indeed, after telling so many stories about heroes accomplishing mighty deeds, many bards take these themes to heart and assume heroic roles themselves.
   </p>
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/bard">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/bard"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/bard.png')";
   
 }
 function cleric(){
+  console.log('cleric');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_cleric.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Cleric';
-  document.getElementById('class_range').innerHTML = '19 February –  21 March';
+  document.getElementById('class_range').innerHTML = '19 February –  20 March';
   class_detail_text.innerHTML = 
   `<h1>Cleric</h1>
     <p>Arms and eyes upraised toward the sun and a prayer on his lips, an elf begins to glow with an inner light that spills out to heal his battle-worn companions.
@@ -186,19 +198,22 @@ function cleric(){
     Most adventuring clerics maintain some connection to established temples and orders of their faiths. A temple might ask for a cleric’s aid, or a high priest might be in a position to demand it.
   </p>
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/cleric">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/cleric"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/cleric.png')";
   
 }
 function druid(){
+  console.log('druid');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_druid.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Druid';
-  document.getElementById('class_range').innerHTML = '21 March –  20 April';
+  document.getElementById('class_range').innerHTML = '21 March –  19 April';
   class_detail_text.innerHTML = 
   `<h1>Druid</h1>
     <p>Holding high a gnarled staff wreathed with holly, an elf summons the fury of the storm and calls down explosive bolts of lightning to smite the torch-carrying orcs who threaten her forest.
@@ -226,18 +241,21 @@ function druid(){
     Druids are often found guarding sacred sites or watching over regions of unspoiled nature. But when a significant danger arises, threatening nature’s balance or the lands they protect, druids take on a more active role in combating the threat, as adventurers.
   </p>
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/druid">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/druid"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/druid.png')";
 }
 function fighter(){
+  console.log('fighter');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_fighter.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Fighter';
-  document.getElementById('class_range').innerHTML = '20 April –  21 May';
+  document.getElementById('class_range').innerHTML = '20 April –  20 May';
   class_detail_text.innerHTML = 
   `<h1>Fighter</h1>
     <p>A human in clanging plate armor holds her shield before her as she runs toward the massed goblins. An elf behind her, clad in studded leather armor, peppers the goblins with arrows loosed from his exquisite bow. The half-orc nearby shouts orders, helping the two combatants coordinate their assault to the best advantage.
@@ -261,13 +279,16 @@ function fighter(){
   Some fighters feel drawn to use their training as adventurers. The dungeon delving, monster slaying, and other dangerous work common among adventurers is second nature for a fighter, not all that different from the life he or she left behind. There are greater risks, perhaps, but also much greater rewards—few fighters in the city watch have the opportunity to discover a magic flame tongue sword, for example.
   </p>
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/fighter">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/fighter"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/fighter.png')";
 }
 function monk(){
+  console.log('monk');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_monk.play();
   }
   is_submit = false;
@@ -301,18 +322,21 @@ function monk(){
   </p>
 
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/monk">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/monk"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/monk.png')";
 }
 function paladin(){
+  console.log('paladin');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_paladin.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Paladin';
-  document.getElementById('class_range').innerHTML = '21 June –  23 July';
+  document.getElementById('class_range').innerHTML = '22 June –  22 July';
   class_detail_text.innerHTML = 
   `<h1>Paladin</h1>
     <p>
@@ -340,18 +364,21 @@ function paladin(){
   </p>
 
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/paladin">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/paladin"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/paladin.png')";
 }
 function ranger(){
+  console.log('ranger');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_ranger.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Ranger';
-  document.getElementById('class_range').innerHTML = '23 July –  23 August';
+  document.getElementById('class_range').innerHTML = '23 July –  22 August';
   class_detail_text.innerHTML = 
   `<h1>Ranger</h1>
     <p>
@@ -379,18 +406,21 @@ function ranger(){
   </p>
 
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/ranger">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/ranger"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/ranger.png')";
 }
 function rogue(){
+  console.log('rogue');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_rogue.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Rogue';
-  document.getElementById('class_range').innerHTML = '23 August –  23 September';
+  document.getElementById('class_range').innerHTML = '23 August –  22 September';
   class_detail_text.innerHTML = 
   `<h1>Rogue</h1>
     <p>
@@ -418,13 +448,16 @@ function rogue(){
   </p>
 
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/ranger">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/ranger"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/rogue.png')";
 }
 function sorcerer(){
+  console.log('sorcerer');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_sorcerer.play();
   }
   is_submit = false;
@@ -459,18 +492,21 @@ function sorcerer(){
   </p>
 
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/sorcerer">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/sorcerer"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/sorcerer.png')";
 }
 function warlock(){
+  console.log('warlock');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_warlock.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Warlock';
-  document.getElementById('class_range').innerHTML = '23 October –  22 November';
+  document.getElementById('class_range').innerHTML = '24 October –  21 November';
   class_detail_text.innerHTML = 
   `<h1>Warlock</h1>
     <p>
@@ -500,18 +536,21 @@ function warlock(){
   </p>
 
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/warlock">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/warlock"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/warlock.png')";
 }
 function wizard(){
+  console.log('wizard');
+  document.getElementById('invalid_date').hidden = true;
   expand();
   if (!mute){
+    muteAll();
     s_wizard.play();
   }
   is_submit = false;
   document.getElementById('what_is_ur_class').innerHTML = 'Wizard';
-  document.getElementById('class_range').innerHTML = '23 November –  22 December';
+  document.getElementById('class_range').innerHTML = '22 November –  21 December';
   class_detail_text.innerHTML = 
   `<h1>Wizard</h1>
     <p>
@@ -539,11 +578,38 @@ function wizard(){
   </p>
 
   <div id="dnd_beyond_link">
-      <a href="https://www.dndbeyond.com/classes/wizard">More Information >></a>
+      <a href="https://www.dndbeyond.com/classes/wizard"  target="_blank">More Information >></a>
       </div>`;
   document.getElementById('icon').style.backgroundImage = "url('./img/wizard.png')";
 }
 
+function muteAll(){
+  s_barbarian.pause();
+  s_bard.pause();
+  s_cleric.pause();
+  s_druid.pause();
+  s_fighter.pause();
+  s_monk.pause();
+  s_paladin.pause();
+  s_ranger.pause();
+  s_rogue.pause();
+  s_sorcerer.pause();
+  s_warlock.pause();
+  s_wizard.pause();
+
+  s_barbarian.currentTime = 0
+  s_bard.currentTime = 0
+  s_cleric.currentTime = 0
+  s_druid.currentTime = 0
+  s_fighter.currentTime = 0
+  s_monk.currentTime = 0
+  s_paladin.currentTime = 0
+  s_ranger.currentTime = 0
+  s_rogue.currentTime = 0
+  s_sorcerer.currentTime = 0
+  s_warlock.currentTime = 0
+  s_wizard.currentTime = 0
+}
 
 
 
@@ -578,6 +644,20 @@ s_sorcerer.volume = .4;
 s_warlock.volume = .4;
 s_wizard.volume = .4;
 
+var p_unknown = new Image("url('./img/unknown.png')");
+var p_barbarian = new Image("url('./img/barbarian.png')");
+var p_bard = new Image("url('./img/bard.png')");
+var p_cleric = new Image("url('./img/cleric.png')");
+var p_druid = new Image("url('./img/druid.png')");
+var p_fighter = new Image("url('./img/fighter.png')");
+var p_monk = new Image("url('./img/monk.png')");
+var p_paladin = new Image("url('./img/paladin.png')");
+var p_ranger = new Image("url('./img/ranger.png')");
+var p_rogue = new Image("url('./img/rogue.png')");
+var p_sorcerer = new Image("url('./img/sorcerer.png')");
+var p_warlock = new Image("url('./img/warlock.png')");
+var p_wizard = new Image("url('./img/wizard.png')");
+
 
 submit.addEventListener('click',function(){
   var b_date = new Date(document.getElementById('b_date').value);
@@ -591,7 +671,7 @@ if (is_submit){
     console.log(b_month, b_day);
     let class_detail = document.getElementById('class_detail');
     expand();
-    var dnd_class =whatClass(b_month, b_day, class_detail_text);
+    var dnd_class =whatClass(b_month, b_day);
     is_submit = false;
     
     document.getElementById('invalid_date').hidden = true;
@@ -694,5 +774,6 @@ play.addEventListener('click',function(){
   else{
     mute = true;
     play.style.backgroundImage = "url('./img/mute.svg')"
+    muteAll();
   }
 })

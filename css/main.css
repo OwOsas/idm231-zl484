@@ -5,10 +5,30 @@
 }
 
 body{
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'AlegreyaSansSC', sans-serif;
 }
+
+body ::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content: 
+    url('../img/unknown.png') 
+    url('../img/barbarian.png')
+    url('../img/bard.png')
+    url('../img/cleric.png')
+    url('../img/druid.png')
+    url('../img/fighter.png')
+    url('../img/monk.png')
+    url('../img/paladin.png')
+    url('../img/ranger.png')
+    url('../img/rogue.png')
+    url('../img/sorcerer.png')
+    url('../img/warlock.png')
+    url('../img/wizard.png');
+    
+}
+
 p{
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'AlegreyaSans', sans-serif;
 }
 .page_container{
     display: flex;
@@ -29,7 +49,9 @@ a{
 /* -----------------Birthday UI------------------- */
 #birthday_ui_container{
     width: 86%;
-
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
     height: 100%;
     background-color: white;
     display: flex;
@@ -148,7 +170,7 @@ a{
     box-sizing: border-box;
     width: 0;
     border-radius: 3em;
-    border: 2px solid #c8c8c8;
+    border: 2px solid #797979;
     margin: 0;
     font-size: 1.5em;
     text-align: center;
@@ -248,7 +270,7 @@ a{
 .class_UI:hover{
     opacity: 1;
     border: 5px solid rgb(231, 231, 231);
-    box-shadow: 0 0 10 rgb(177, 177, 177);
+    box-shadow: 0 0 10px rgb(177, 177, 177);
     transition: all .2s;
     box-shadow: 0 0 10px rgba(141, 141, 141, 0.404);
 }
@@ -374,7 +396,7 @@ a{
 #help_modal{
     position: relative;
     background-color: white;
-    width: 35%;
+    width: 40%;
     padding: 1vw 2vw 2vw 2vw;
     border: 5px solid rgb(61, 61, 61);
     border-radius: 1.5vw;
